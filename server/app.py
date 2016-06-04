@@ -16,8 +16,13 @@ app = Flask(**flask_args)
 def dashboard_page():
     return render_template('dashboard.html'), 200
 
+@app.route('/api/<request_resource>', methods=['POST'])
+def api_endpoint(request_resource=''):
+    response_dict = { 'status': 'ok' }
+    return jsonify(response_dict), 200
+
 @app.errorhandler(404)
-def page_not_found():
+def page_not_found(error):
     return render_template('404.html'), 404
 
 if __name__ == '__main__':
