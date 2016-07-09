@@ -101,7 +101,7 @@
         "Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]
     },
     ".incident_media[0]": {
-      "must_contain": [ "http\\s:.*"]
+      "must_contain": [ "https?:.*"]
     }
   }
 }
