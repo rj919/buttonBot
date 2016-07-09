@@ -1,0 +1,9 @@
+{
+  "case_fields": {
+      "contact_info": {},
+      "incident_details": {},
+      "process_awareness": {}
+  },
+  "message_history": [],
+  "prompt": {}
+}

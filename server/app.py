@@ -6,6 +6,8 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
+import json
+
 from flask import Flask, request, session, jsonify, url_for, render_template
 flask_args = {
     'import_name': __name__
@@ -18,7 +20,10 @@ def dashboard_page():
 
 @app.route('/api/<request_resource>', methods=['POST'])
 def api_endpoint(request_resource=''):
-    response_dict = { 'status': 'ok' }
+    if request_resource == 'model':
+        response_dict = json.loads(open('models/nlp-request-model.json').read())
+    else:
+        response_dict = { 'status': 'ok' }
     return jsonify(response_dict), 200
 
 @app.errorhandler(404)
