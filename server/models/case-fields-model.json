@@ -1,18 +1,104 @@
 {
   "schema": {
-    "first_name": "Richard",
-    "last_name": "James",
-    "street_address": "32 Gansevoort St",
+    "civilians": [
+      { "first_name": "Richard",
+      "last_name": "James",
+      "street_address": "32 Gansevoort St",
+      "city": "New York City",
+      "state": "",
+      "zip_code": "10014",
+      "birth_month": "",
+      "birth_day": "",
+      "birth_year": "",
+      "home_phone": "2123476574",
+      "business_phone": "2123568561",
+      "mobile_phone": "9178565357",
+      "permission_to_text": true,
+      "mobile_carrier": "Verizon",
+      "email_address": "rcjames@gmail.com",
+      "gender": "",
+      "sexual_orientation": "",
+      "race": "",
+      "victim_or_not": true,
+      "witness_or_not": true,
+      "complaintant_or_not": true,
+      "relation_to_victim": "" }
+      ],
+    "incident_month": "",
+    "incident_day": "",
+    "incident_year": "",
+    "incident_hour": "",
+    "incident_minute": "",
+    "incident_am_or_pm": "",
+    "incident_location": "Outside Penn Station on 8th Ave",
+    "incident_borough": "",
+    "incident_description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for 
+    my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He 
+    eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
     "incident_media": [
       "https://ombotsman.bot/3dnc9J"
-    ],
-    "address_region": ""
+    ]
   },
   "components": {
-    ".address_region": {
+    ".state": {
       "discrete_values": [
-        "AZ", "AL", "AK"
-      ]
+        "Alabama", "Alaska", "Arkansas"]
+    },
+    ".birth_month": {
+      "discrete_values": [
+        "January", "February", "March"]
+    },
+    ".birth_day": {
+      "discrete_values": [
+        "1", "2", "3"]
+    },
+    ".birth_year": {
+      "discrete_values": [
+        "1900", "1901", "1902"]
+    },
+    ".gender": {
+      "discrete_values": [
+        "Male", "Female", "Transman", "Transwoman", "Not described"]
+    },
+    ".sexual_orientation": {
+      "discrete_values": [
+        "Heterosexual or straight", "Gay or lesbian", "Bisexual", "Other"]
+    },
+    ".race": {
+      "discrete_values": [
+        "White", "Black", "Hispanic", "Asian", "American Indian", "Other"]
+    },
+    ".relation_to_victim": {
+      "discrete_values": [
+        "Parent", "Spouse", "Relative", "Guardian", "Child", "Friend", "Other"]
+    },
+    ".incident_month": {
+      "discrete_values": [
+        "January", "February", "March"]
+    },
+    ".incident_day": {
+      "discrete_values": [
+        "1", "2", "3"]
+    },
+    ".incident_year": {
+      "discrete_values": [
+        "1900", "1901", "1902"]
+    },
+    ".incident_hour": {
+      "discrete_values": [
+        "1", "2", "3"]
+    },
+    ".incident_minute": {
+      "discrete_values": [
+        "1", "2", "3"]
+    },
+    ".incident_am_or_pm": {
+      "discrete_values": [
+        "AM", "PM"]
+    },
+    ".incident_borough": {
+      "discrete_values": [
+        "Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]
     },
     ".incident_media[0]": {
       "must_contain": [ "http\\s:.*"]
