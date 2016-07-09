@@ -1,28 +1,30 @@
 {
   "schema": {
     "civilians": [
-      { "first_name": "Richard",
-      "last_name": "James",
-      "street_address": "32 Gansevoort St",
-      "city": "New York City",
-      "state": "",
-      "zip_code": "10014",
-      "birth_month": "",
-      "birth_day": "",
-      "birth_year": "",
-      "home_phone": "2123476574",
-      "business_phone": "2123568561",
-      "mobile_phone": "9178565357",
-      "permission_to_text": true,
-      "mobile_carrier": "Verizon",
-      "email_address": "rcjames@gmail.com",
-      "gender": "",
-      "sexual_orientation": "",
-      "race": "",
-      "victim_or_not": true,
-      "witness_or_not": true,
-      "complaintant_or_not": true,
-      "relation_to_victim": "" }
+      { 
+        "first_name": "Richard",
+        "last_name": "James",
+        "street_address": "32 Gansevoort St",
+        "city": "New York City",
+        "state": "",
+        "zip_code": "10014",
+        "birth_month": "",
+        "birth_day": "",
+        "birth_year": "",
+        "home_phone": "2123476574",
+        "business_phone": "2123568561",
+        "mobile_phone": "9178565357",
+        "permission_to_text": true,
+        "mobile_carrier": "Verizon",
+        "email_address": "rcjames@gmail.com",
+        "gender": "",
+        "sexual_orientation": "",
+        "race": "",
+        "victim_or_not": true,
+        "witness_or_not": true,
+        "complaintant_or_not": true,
+        "relation_to_victim": ""
+      }
     ],
     "incident_month": "",
     "incident_day": "",
@@ -32,9 +34,7 @@
     "incident_am_or_pm": "",
     "incident_location": "Outside Penn Station on 8th Ave",
     "incident_borough": "",
-    "incident_description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for 
-    my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He 
-    eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
+    "incident_description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
     "incident_media": [
       "https://ombotsman.bot/3dnc9J"
     ]
