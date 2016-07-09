@@ -1,0 +1,16 @@
+{
+  "schema": {
+    "first_name": "Richard",
+    "last_name": "James",
+    "street_address": "32 Gansevoort St",
+    "incident_videos": [
+      "https://ombotsman.bot/3dnc9J"
+    ],
+    "address_region": ""
+  },
+  "components": {
+    ".address_region": [
+      "AZ", "AL", "AK"
+    ]
+  }
+}
