@@ -23,7 +23,7 @@
       "witness_or_not": true,
       "complaintant_or_not": true,
       "relation_to_victim": "" }
-      ],
+    ],
     "incident_month": "",
     "incident_day": "",
     "incident_year": "",
@@ -40,35 +40,35 @@
     ]
   },
   "components": {
-    ".state": {
+    ".civilians[0].state": {
       "discrete_values": [
         "Alabama", "Alaska", "Arkansas"]
     },
-    ".birth_month": {
+    ".civilians[0].birth_month": {
       "discrete_values": [
         "January", "February", "March"]
     },
-    ".birth_day": {
+    ".civilians[0].birth_day": {
       "discrete_values": [
         "1", "2", "3"]
     },
-    ".birth_year": {
+    ".civilians[0].birth_year": {
       "discrete_values": [
         "1900", "1901", "1902"]
     },
-    ".gender": {
+    ".civilians[0].gender": {
       "discrete_values": [
         "Male", "Female", "Transman", "Transwoman", "Not described"]
     },
-    ".sexual_orientation": {
+    ".civilians[0].sexual_orientation": {
       "discrete_values": [
         "Heterosexual or straight", "Gay or lesbian", "Bisexual", "Other"]
     },
-    ".race": {
+    ".civilians[0].race": {
       "discrete_values": [
         "White", "Black", "Hispanic", "Asian", "American Indian", "Other"]
     },
-    ".relation_to_victim": {
+    ".civilians[0].relation_to_victim": {
       "discrete_values": [
         "Parent", "Spouse", "Relative", "Guardian", "Child", "Friend", "Other"]
     },
