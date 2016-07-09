@@ -1,9 +1,17 @@
 {
   "case_fields": {
-      "contact_info": {},
-      "incident_details": {},
-      "process_awareness": {}
+    "first_name": "Richard",
+    "last_name": "James",
+    "street_address": "32 Gansevoort St"
   },
-  "message_history": [],
-  "prompt": {}
+  "message_history": [
+    {
+      "sender": "id",
+      "dt": 14000000.0,
+      "text": "",
+      "url": "",
+      "options": [],
+      "media": ""
+    }
+  ]
 }
