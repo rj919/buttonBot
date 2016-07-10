@@ -38,6 +38,25 @@
     "incident_media": [
       "https://ombotsman.bot/3dnc9J"
     ]
+    "officers": [
+      {
+        "rank": "",
+        "officer_first_name": "Jerry",
+        "officer_last_name": "Seinfeld",
+        "officer_subject_or_witness": "",
+        "officer_sex": "",
+        "officer_race": "",
+        "precinct_command": "13th",
+        "shield_number": "6386",
+        "plainclothes_or_uniform": "",
+        "foot_or_car": "",
+        "car_number": "2855",
+        "license_plate_number": "749111",
+        "car_marked": "",
+        "officer_description": "White male, mid-40's with salt and pepper hair, around 6'2" and medium build.",
+        "officer_role": "Instigator of incident - he was the one who began intimidating and cursing me out."
+      }
+    ]  
   },
   "components": {
     ".civilians[0].state": {
@@ -47,7 +66,6 @@
     ".civilians[0].birth_month": {
       "discrete_values": [
         "January", "February", "March"]
-    },
     ".civilians[0].birth_day": {
       "discrete_values": [
         "1", "2", "3"]
@@ -102,6 +120,34 @@
     },
     ".incident_media[0]": {
       "must_contain": [ "https?:.*"]
+    }
+    ".officers[0].rank": {
+      "discrete_values": [
+        "Police officer", "Sergeant", "Lieutenant", "Captain"]
+    },
+    ".officers[0].officer_subject_or_witness": {
+      "discrete_values": [
+        "Subject Officer", "Witness Officer"]
+    },
+    ".officers[0].officer_sex": {
+      "discrete_values": [
+        "Male", "Female"]
+    },
+    ".officers[0].officer_race": {
+      "discrete_values": [
+        "White", "Black", "Hispanic", "Asian", "Other"]
+    },
+    ".officers[0].plainclothes_or_uniform": {
+      "discrete_values": [
+        "Plainclothes", "In Uniform"]
+    },
+    ".officers[0].foot_or_car": {
+      "discrete_values": [
+        "On Foot", "In Car"]
+    },
+    ".officers[0].car_marked": {
+      "discrete_values": [
+        "Marked", "Unmarked"]
     }
   }
 }
