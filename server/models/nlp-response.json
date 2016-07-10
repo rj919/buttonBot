@@ -1,0 +1,72 @@
+{
+  "details": {
+    "case_fields": {
+      "civilians": [
+        {
+          "birth_date": "",
+          "business_phone": "",
+          "city": "",
+          "complaintant_or_not": false,
+          "email_address": "",
+          "first_name": "",
+          "gender": "",
+          "home_phone": "",
+          "last_name": "",
+          "mobile_carrier": "",
+          "mobile_phone": "",
+          "permission_to_text": false,
+          "race": "",
+          "relation_to_victim": "",
+          "sexual_orientation": "",
+          "state": "",
+          "street_address": "",
+          "victim_or_not": false,
+          "witness_or_not": false,
+          "zip_code": ""
+        }
+      ],
+      "incident": {
+        "borough": "",
+        "date": "",
+        "description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
+        "location": "Outside Penn Station on 8th Ave",
+        "media": [
+          "https://ombotsman.bot/3dnc9J"
+        ]
+      },
+      "officers": [
+        {
+          "car_marked": "",
+          "car_number": "2855",
+          "description": "White male, mid-40's with salt and pepper hair, around 6'2\" and medium build.",
+          "first_name": "Jerry",
+          "foot_or_car": "",
+          "last_name": "Seinfeld",
+          "license_plate_number": "749111",
+          "plainclothes_or_uniform": "",
+          "precinct_command": "13th",
+          "race": "",
+          "rank": "",
+          "role": "Instigator of incident - he was the one who began intimidating and cursing me out.",
+          "sex": "",
+          "shield_number": "6386",
+          "subject_or_witness": ""
+        }
+      ]
+    },
+    "outgoing_messages": [
+      {
+        "dt": 14000000,
+        "media": "",
+        "options": [
+          "skip"
+        ],
+        "sender": "id",
+        "text": "",
+        "url": ""
+      }
+    ]
+  },
+  "dt": 1468124155.757643,
+  "status": "success"
+}

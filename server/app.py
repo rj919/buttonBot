@@ -26,25 +26,28 @@ from server.methods.request_deconstructor import requestDeconstructor
 # construct botClient
 from server.bot import botClient
 import json
-message_schema = json.loads(open('models/messages-model.json').read())
-case_schema = json.loads(open('models/case-fields-model.json').read())
-request_schema = {
+bot_kwargs = {
+    'message_schema': json.loads(open('models/messages-model.json').read()),
+    'case_schema': json.loads(open('models/case-fields-model.json').read()),
+    'question_sequence': json.loads(open('models/question-sequence.json').read())
+}
+bot_kwargs['request_schema'] = {
     'schema': {
-        'case_fields': case_schema['schema'],
+        'case_fields': bot_kwargs['case_schema']['schema'],
         'message_history': [
-            message_schema['schema']
+            bot_kwargs['message_schema']['schema']
         ]
     }
 }
-response_schema = {
+bot_kwargs['response_schema'] = {
     'schema': {
-        'case_fields': case_schema['schema'],
+        'case_fields': bot_kwargs['case_schema']['schema'],
         'outgoing_messages': [
-            message_schema['schema']
+            bot_kwargs['message_schema']['schema']
         ]
     }
 }
-case_bot = botClient(message_schema, case_schema, request_schema, response_schema)
+case_bot = botClient(**bot_kwargs)
 
 @app.route('/')
 def dashboard_page():
@@ -59,7 +62,7 @@ def api_endpoint(request_resource=''):
         'details': {}
     }
     if request_resource == 'analyze':
-        request_details = requestDeconstructor(request, request_schema)
+        request_details = requestDeconstructor(request, bot_kwargs['request_schema'])
         if not request_details:
             response_dict['status'] = 'error'
         else:

@@ -1,0 +1,72 @@
+{
+  "details": {
+    "case_fields": {
+      "civilians": [
+        {
+          "birth_date": "",
+          "business_phone": "2123568561",
+          "city": "New York City",
+          "complaintant_or_not": true,
+          "email_address": "rcjames@gmail.com",
+          "first_name": "Richard",
+          "gender": "",
+          "home_phone": "2123476574",
+          "last_name": "James",
+          "mobile_carrier": "Verizon",
+          "mobile_phone": "9178565357",
+          "permission_to_text": true,
+          "race": "",
+          "relation_to_victim": "",
+          "sexual_orientation": "",
+          "state": "",
+          "street_address": "32 Gansevoort St",
+          "victim_or_not": true,
+          "witness_or_not": true,
+          "zip_code": "10014"
+        }
+      ],
+      "incident": {
+        "borough": "",
+        "date": "",
+        "description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
+        "location": "Outside Penn Station on 8th Ave",
+        "media": [
+          "https://ombotsman.bot/3dnc9J"
+        ]
+      },
+      "officers": [
+        {
+          "car_marked": "",
+          "car_number": "2855",
+          "description": "White male, mid-40's with salt and pepper hair, around 6'2\" and medium build.",
+          "first_name": "Jerry",
+          "foot_or_car": "",
+          "last_name": "Seinfeld",
+          "license_plate_number": "749111",
+          "plainclothes_or_uniform": "",
+          "precinct_command": "13th",
+          "race": "",
+          "rank": "",
+          "role": "Instigator of incident - he was the one who began intimidating and cursing me out.",
+          "sex": "",
+          "shield_number": "6386",
+          "subject_or_witness": ""
+        }
+      ]
+    },
+    "message_history": [
+      {
+        "dt": 14000000,
+        "media": "",
+        "options": [
+          "skip"
+        ],
+        "sender": "id",
+        "text": "",
+        "url": ""
+      }
+    ]
+  },
+  "dt": 1468119436.956251,
+  "status": "success"
+}
