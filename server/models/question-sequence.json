@@ -3,10 +3,82 @@
     {
       "sender": "ombotsman",
       "dt": 14000000.0,
-      "text": "",
+      "text": "Sorry to hear that. Can you tell me what happened?",
       "url": "",
       "options": [ ],
       "media": ""
-    }
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "Do you have any of the officer's information?",
+      "url": "",
+      "options": ["Name", "Badge number", "Patrol car number", "None" ],
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "What did the officer look like? Things like height, weight, hair and eye color, gender and race are helpful.",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "Where did this happen?",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "When did this happen?",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "Who else saw this?",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "Do you have any videos, photos or audio recordings of the incident?",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
+    {
+      "sender": "ombotsman",
+      "dt": 14000000.0,
+      "text": "",
+      "url": "",
+      "options": "",
+      "media": ""
+    },
   ]
 }
