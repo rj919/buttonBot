@@ -1,116 +1,123 @@
 {
-  "schema": {
-    "civilians": [
-      { 
-        "first_name": "Richard",
-        "last_name": "James",
-        "street_address": "32 Gansevoort St",
-        "city": "New York City",
-        "state": "",
-        "zip_code": "10014",
-        "birth_month": "",
-        "birth_day": "",
-        "birth_year": "",
-        "home_phone": "2123476574",
-        "business_phone": "2123568561",
-        "mobile_phone": "9178565357",
-        "permission_to_text": true,
-        "mobile_carrier": "Verizon",
-        "email_address": "rcjames@gmail.com",
-        "gender": "",
-        "sexual_orientation": "",
-        "race": "",
-        "victim_or_not": true,
-        "witness_or_not": true,
-        "complaintant_or_not": true,
-        "relation_to_victim": ""
-      }
-    ],
-    incident: {
-    "date": "",
-    "location": "Outside Penn Station on 8th Ave",
-    "borough": "",
-    "description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
-    "media": [
-      "https://ombotsman.bot/3dnc9J"
-    ]
-      
-    },
-    "officers": [
-      {
-        "rank": "",
-        "first_name": "Jerry",
-        "last_name": "Seinfeld",
-        "subject_or_witness": "",
-        "sex": "",
-        "race": "",
-        "precinct_command": "13th",
-        "shield_number": "6386",
-        "plainclothes_or_uniform": "",
-        "foot_or_car": "",
-        "car_number": "2855",
-        "license_plate_number": "749111",
-        "car_marked": "",
-        "description": "White male, mid-40's with salt and pepper hair, around 6'2" and medium build.",
-        "role": "Instigator of incident - he was the one who began intimidating and cursing me out."
-      }
-    ]  
-  },
-  "components": {
-    ".civilians[0].state": {
-      "discrete_values": [
-        "Alabama", "Alaska", "Arkansas"]
-    },
-    ".civilians[0].gender": {
-      "discrete_values": [
-        "Male", "Female", "Transman", "Transwoman", "Not described"]
-    },
-    ".civilians[0].sexual_orientation": {
-      "discrete_values": [
-        "Heterosexual or straight", "Gay or lesbian", "Bisexual", "Other"]
-    },
-    ".civilians[0].race": {
-      "discrete_values": [
-        "White", "Black", "Hispanic", "Asian", "American Indian", "Other"]
-    },
-    ".civilians[0].relation_to_victim": {
-      "discrete_values": [
-        "Parent", "Spouse", "Relative", "Guardian", "Child", "Friend", "Other"]
-    },
-    ".incident.borough": {
-      "discrete_values": [
-        "Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]
-    },
-    ".incident.media[0]": {
-      "must_contain": [ "https?:.*"]
-    }
-    ".officers[0].rank": {
-      "discrete_values": [
-        "Police officer", "Sergeant", "Lieutenant", "Captain"]
-    },
-    ".officers[0].subject_or_witness": {
-      "discrete_values": [
-        "Subject Officer", "Witness Officer"]
-    },
-    ".officers[0].sex": {
-      "discrete_values": [
-        "Male", "Female"]
-    },
-    ".officers[0].race": {
-      "discrete_values": [
-        "White", "Black", "Hispanic", "Asian", "Other"]
-    },
-    ".officers[0].plainclothes_or_uniform": {
-      "discrete_values": [
-        "Plainclothes", "In Uniform"]
-    },
-    ".officers[0].foot_or_car": {
-      "discrete_values": [
-        "On Foot", "In Car"]
-    },
-    ".officers[0].car_marked": {
-      "discrete_values": [
-        "Marked", "Unmarked"]
-    }
-  }
+	"schema": {
+		"civilians": [{
+			"first_name": "Richard",
+			"last_name": "James",
+			"street_address": "32 Gansevoort St",
+			"city": "New York City",
+			"state": "",
+			"zip_code": "10014",
+			"birth_date": "",
+			"home_phone": "2123476574",
+			"business_phone": "2123568561",
+			"mobile_phone": "9178565357",
+			"permission_to_text": true,
+			"mobile_carrier": "Verizon",
+			"email_address": "rcjames@gmail.com",
+			"gender": "",
+			"sexual_orientation": "",
+			"race": "",
+			"victim_or_not": true,
+			"witness_or_not": true,
+			"complaintant_or_not": true,
+			"relation_to_victim": ""
+		}],
+		"incident": {
+			"date": "",
+			"location": "Outside Penn Station on 8th Ave",
+			"borough": "",
+			"description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
+			"media": [
+				"https://ombotsman.bot/3dnc9J"
+			]
+
+		},
+		"officers": [{
+			"rank": "",
+			"first_name": "Jerry",
+			"last_name": "Seinfeld",
+			"subject_or_witness": "",
+			"sex": "",
+			"race": "",
+			"precinct_command": "13th",
+			"shield_number": "6386",
+			"plainclothes_or_uniform": "",
+			"foot_or_car": "",
+			"car_number": "2855",
+			"license_plate_number": "749111",
+			"car_marked": "",
+			"description": "White male, mid-40's with salt and pepper hair, around 6'2\" and medium build.",
+			"role": "Instigator of incident - he was the one who began intimidating and cursing me out."
+		}]
+	},
+	"components": {
+		".civilians[0].state": {
+			"discrete_values": [
+				"Alabama", "Alaska", "Arkansas"
+			]
+		},
+		".civilians[0].gender": {
+			"discrete_values": [
+				"Male", "Female", "Transman", "Transwoman", "Not described"
+			]
+		},
+		".civilians[0].sexual_orientation": {
+			"discrete_values": [
+				"Heterosexual or straight", "Gay or lesbian", "Bisexual", "Other"
+			]
+		},
+		".civilians[0].race": {
+			"discrete_values": [
+				"White", "Black", "Hispanic", "Asian", "American Indian", "Other"
+			]
+		},
+		".civilians[0].relation_to_victim": {
+			"discrete_values": [
+				"Parent", "Spouse", "Relative", "Guardian", "Child", "Friend", "Other"
+			]
+		},
+		".incident.borough": {
+			"discrete_values": [
+				"Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"
+			]
+		},
+		".incident.media[0]": {
+			"must_contain": ["https?:.*"]
+		},
+		".officers[0].rank": {
+			"discrete_values": [
+				"Police officer", "Sergeant", "Lieutenant", "Captain"
+			]
+		},
+		".officers[0].subject_or_witness": {
+			"discrete_values": [
+				"Subject Officer", "Witness Officer"
+			]
+		},
+		".officers[0].sex": {
+			"discrete_values": [
+				"Male", "Female"
+			]
+		},
+		".officers[0].race": {
+			"discrete_values": [
+				"White", "Black", "Hispanic", "Asian", "Other"
+			]
+		},
+		".officers[0].plainclothes_or_uniform": {
+			"discrete_values": [
+				"Plainclothes", "In Uniform"
+			]
+		},
+		".officers[0].foot_or_car": {
+			"discrete_values": [
+				"On Foot", "In Car"
+			]
+		},
+		".officers[0].car_marked": {
+			"discrete_values": [
+				"Marked", "Unmarked"
+			]
+		}
+	}
 }
