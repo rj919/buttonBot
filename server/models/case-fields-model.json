@@ -26,26 +26,24 @@
         "relation_to_victim": ""
       }
     ],
-    "incident_month": "",
-    "incident_day": "",
-    "incident_year": "",
-    "incident_hour": "",
-    "incident_minute": "",
-    "incident_am_or_pm": "",
-    "incident_location": "Outside Penn Station on 8th Ave",
-    "incident_borough": "",
-    "incident_description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
-    "incident_media": [
+    incident: {
+    "date": "",
+    "location": "Outside Penn Station on 8th Ave",
+    "borough": "",
+    "description": "I was waiting outside Penn Station to meet a friend, when an officer approached me and asked for my ID. I told him I wasn't doing anything illegal and he began to intimidate me and invade my personal space. He eventually started swearing and screaming obscenities at me before my friend arrived and we left.",
+    "media": [
       "https://ombotsman.bot/3dnc9J"
     ]
+      
+    },
     "officers": [
       {
         "rank": "",
-        "officer_first_name": "Jerry",
-        "officer_last_name": "Seinfeld",
-        "officer_subject_or_witness": "",
-        "officer_sex": "",
-        "officer_race": "",
+        "first_name": "Jerry",
+        "last_name": "Seinfeld",
+        "subject_or_witness": "",
+        "sex": "",
+        "race": "",
         "precinct_command": "13th",
         "shield_number": "6386",
         "plainclothes_or_uniform": "",
@@ -53,8 +51,8 @@
         "car_number": "2855",
         "license_plate_number": "749111",
         "car_marked": "",
-        "officer_description": "White male, mid-40's with salt and pepper hair, around 6'2" and medium build.",
-        "officer_role": "Instigator of incident - he was the one who began intimidating and cursing me out."
+        "description": "White male, mid-40's with salt and pepper hair, around 6'2" and medium build.",
+        "role": "Instigator of incident - he was the one who began intimidating and cursing me out."
       }
     ]  
   },
@@ -62,17 +60,6 @@
     ".civilians[0].state": {
       "discrete_values": [
         "Alabama", "Alaska", "Arkansas"]
-    },
-    ".civilians[0].birth_month": {
-      "discrete_values": [
-        "January", "February", "March"]
-    ".civilians[0].birth_day": {
-      "discrete_values": [
-        "1", "2", "3"]
-    },
-    ".civilians[0].birth_year": {
-      "discrete_values": [
-        "1900", "1901", "1902"]
     },
     ".civilians[0].gender": {
       "discrete_values": [
@@ -90,50 +77,26 @@
       "discrete_values": [
         "Parent", "Spouse", "Relative", "Guardian", "Child", "Friend", "Other"]
     },
-    ".incident_month": {
-      "discrete_values": [
-        "January", "February", "March"]
-    },
-    ".incident_day": {
-      "discrete_values": [
-        "1", "2", "3"]
-    },
-    ".incident_year": {
-      "discrete_values": [
-        "1900", "1901", "1902"]
-    },
-    ".incident_hour": {
-      "discrete_values": [
-        "1", "2", "3"]
-    },
-    ".incident_minute": {
-      "discrete_values": [
-        "1", "2", "3"]
-    },
-    ".incident_am_or_pm": {
-      "discrete_values": [
-        "AM", "PM"]
-    },
-    ".incident_borough": {
+    ".incident.borough": {
       "discrete_values": [
         "Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]
     },
-    ".incident_media[0]": {
+    ".incident.media[0]": {
       "must_contain": [ "https?:.*"]
     }
     ".officers[0].rank": {
       "discrete_values": [
         "Police officer", "Sergeant", "Lieutenant", "Captain"]
     },
-    ".officers[0].officer_subject_or_witness": {
+    ".officers[0].subject_or_witness": {
       "discrete_values": [
         "Subject Officer", "Witness Officer"]
     },
-    ".officers[0].officer_sex": {
+    ".officers[0].sex": {
       "discrete_values": [
         "Male", "Female"]
     },
-    ".officers[0].officer_race": {
+    ".officers[0].race": {
       "discrete_values": [
         "White", "Black", "Hispanic", "Asian", "Other"]
     },
