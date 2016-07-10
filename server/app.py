@@ -6,13 +6,45 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-import json
-
+# construct flask app object
 from flask import Flask, request, session, jsonify, url_for, render_template
 flask_args = {
     'import_name': __name__
 }
 app = Flask(**flask_args)
+
+# initialize logging and debugging
+import logging
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.DEBUG)
+app.config['ASSETS_DEBUG'] = False
+
+# construct request deconstructor
+from labpack.records import labID
+from server.methods.request_deconstructor import requestDeconstructor
+
+# construct botClient
+from server.bot import botClient
+import json
+message_schema = json.loads(open('models/messages-model.json').read())
+case_schema = json.loads(open('models/case-fields-model.json').read())
+request_schema = {
+    'schema': {
+        'case_fields': case_schema['schema'],
+        'message_history': [
+            message_schema['schema']
+        ]
+    }
+}
+response_schema = {
+    'schema': {
+        'case_fields': case_schema['schema'],
+        'outgoing_messages': [
+            message_schema['schema']
+        ]
+    }
+}
+case_bot = botClient(message_schema, case_schema, request_schema, response_schema)
 
 @app.route('/')
 def dashboard_page():
@@ -20,10 +52,24 @@ def dashboard_page():
 
 @app.route('/api/<request_resource>', methods=['POST'])
 def api_endpoint(request_resource=''):
-    if request_resource == 'model':
-        response_dict = json.loads(open('models/nlp-request-model.json').read())
+    record_id = labID()
+    response_dict = {
+        'status': 'success',
+        'dt': record_id.epoch,
+        'details': {}
+    }
+    if request_resource == 'analyze':
+        request_details = requestDeconstructor(request, request_schema)
+        if not request_details:
+            response_dict['status'] = 'error'
+        else:
+            response_dict['details'] = request_details
+            del response_dict['details']['message_history']
+            response_dict['details']['outgoing_messages'] = []
+    elif request_resource == 'response':
+        response_dict['details'] = case_bot.responseModel.schema
     else:
-        response_dict = { 'status': 'ok' }
+        response_dict['details'] = case_bot.requestModel.schema
     return jsonify(response_dict), 200
 
 @app.errorhandler(404)
