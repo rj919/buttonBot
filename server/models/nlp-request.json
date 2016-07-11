@@ -1,5 +1,6 @@
 {
   "details": {
+    "report_id": "78145cklsf",
     "case_fields": {
       "civilians": [
         {
@@ -58,9 +59,7 @@
       {
         "dt": 14000000,
         "media": "",
-        "options": [
-          "skip"
-        ],
+        "options": [ "skip" ],
         "sender": "id",
         "text": "",
         "url": ""

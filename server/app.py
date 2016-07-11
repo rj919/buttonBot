@@ -20,7 +20,7 @@ app.logger.setLevel(logging.DEBUG)
 app.config['ASSETS_DEBUG'] = False
 
 # construct request deconstructor
-from labpack.records import labID
+from time import time
 from server.methods.request_deconstructor import requestDeconstructor
 
 # construct botClient
@@ -33,6 +33,7 @@ bot_kwargs = {
 }
 bot_kwargs['request_schema'] = {
     'schema': {
+        'report_id': '78145cklsf',
         'case_fields': bot_kwargs['case_schema']['schema'],
         'message_history': [
             bot_kwargs['message_schema']['schema']
@@ -41,6 +42,7 @@ bot_kwargs['request_schema'] = {
 }
 bot_kwargs['response_schema'] = {
     'schema': {
+        'report_id': '78145cklsf',
         'case_fields': bot_kwargs['case_schema']['schema'],
         'outgoing_messages': [
             bot_kwargs['message_schema']['schema']
@@ -55,10 +57,9 @@ def dashboard_page():
 
 @app.route('/api/<request_resource>', methods=['POST'])
 def api_endpoint(request_resource=''):
-    record_id = labID()
     response_dict = {
         'status': 'success',
-        'dt': record_id.epoch,
+        'dt': time(),
         'details': {}
     }
     if request_resource == 'analyze':

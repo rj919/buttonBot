@@ -51,6 +51,40 @@
 		}]
 	},
 	"components": {
+		".civilians": {
+			"field_metadata": {
+				"sequence_order": 2,
+				"initial_question": "can I get some information about you?",
+				"followup_question": "were there any other witnesses to the incident?"
+			}
+		},
+		".officers": {
+			"field_metadata": {
+				"sequence_order": 1,
+				"initial_question": "were there any officers involved in the incident?",
+				"followup_question": "were there any other officers you'd like to add to the report?"
+			}
+		},
+		".incident": {
+			"field_metadata": {
+				"sequence_order": 0
+			}
+		},
+		".incident.description": {
+			"field_metadata": {
+				"sequence_order": 0
+			}
+		},
+		".incident.date": {
+			"field_metadata": {
+				"sequence_order": 1
+			}
+		},
+		".incident.location": {
+			"field_metadata": {
+				"sequence_order": 2
+			}
+		},
 		".civilians[0].state": {
 			"discrete_values": [
 				"Alabama", "Alaska", "Arkansas"
