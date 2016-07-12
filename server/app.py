@@ -7,7 +7,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 # construct flask app object
-from flask import Flask, request, session, jsonify, url_for, render_template
+from flask import Flask, request, jsonify, render_template
 flask_args = {
     'import_name': __name__
 }
@@ -21,7 +21,7 @@ app.config['ASSETS_DEBUG'] = False
 
 # construct request deconstructor
 from time import time
-from server.methods.request_deconstructor import requestDeconstructor
+from server.methods.request_handler import requestDeconstructor
 
 # construct botClient
 from server.bot import botClient
@@ -55,8 +55,19 @@ case_bot = botClient(**bot_kwargs)
 def dashboard_page():
     return render_template('dashboard.html'), 200
 
+@app.route('/api/<interface_type>/<form_type>', methods=['POST'])
+def api_endpoint(interface_type='', form_type=''):
+    response_dict = {
+        'status': 'success',
+        'interface': interface_type,
+        'form': form_type
+    }
+    # request architecture for pygmy depends upon interface
+    # form schema for bot depends upon form type
+    return jsonify(response_dict), 200
+
 @app.route('/api/<request_resource>', methods=['POST'])
-def api_endpoint(request_resource=''):
+def api_request(request_resource=''):
     response_dict = {
         'status': 'success',
         'dt': time(),
@@ -78,6 +89,7 @@ def api_endpoint(request_resource=''):
 
 @app.errorhandler(404)
 def page_not_found(error):
+    # app.logger.debug(error)
     return render_template('404.html'), 404
 
 if __name__ == '__main__':
